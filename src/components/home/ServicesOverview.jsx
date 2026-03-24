@@ -8,7 +8,7 @@ const services = [
     title: 'Security Guards',
     desc: 'Elite armed & unarmed guards, trained to PSARA standards.',
     link: '/services/security',
-    image: 'https://images.unsplash.com/photo-1541888079440-ad818fb52086?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop'
   },
   {
     icon: Sparkles,
