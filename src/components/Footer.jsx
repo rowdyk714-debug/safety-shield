@@ -10,9 +10,11 @@ export default function Footer() {
           {/* Column 1: Company */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 bg-gold-500 rounded transform rotate-45 flex items-center justify-center">
-                <span className="transform -rotate-45 font-bebas text-navy-900 font-bold">SS</span>
-              </div>
+              <img 
+                src="/ss-logo.jpeg" 
+                alt="Safety Shield Logo" 
+                className="w-10 h-10 object-contain bg-white rounded-md p-0.5"
+              />
               <span className="font-bebas text-xl tracking-widest text-white">SAFETY SHIELD</span>
             </div>
             <p className="text-sm leading-relaxed mb-6">

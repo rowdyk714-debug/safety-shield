@@ -45,10 +45,12 @@ export default function Navbar({ toggleTheme, theme, openQuote }) {
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 z-50">
-          <div className="w-10 h-10 bg-gold-500 rounded-lg transform rotate-45 flex items-center justify-center shadow-lg">
-            <span className="transform -rotate-45 font-bebas text-navy-900 text-xl font-bold tracking-wider">SS</span>
-          </div>
+        <Link to="/" className="flex items-center gap-3 z-50 group">
+          <img 
+            src="/ss-logo.jpeg" 
+            alt="Safety Shield Logo" 
+            className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-105"
+          />
           <div className="flex flex-col">
             <span className={clsx('font-bebas text-2xl leading-none tracking-widest', isScrolled ? 'text-navy-900 dark:text-white' : 'text-white')}>
               SAFETY SHIELD
