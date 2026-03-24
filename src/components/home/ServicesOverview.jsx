@@ -8,14 +8,14 @@ const services = [
     title: 'Security Guards',
     desc: 'Elite armed & unarmed guards, trained to PSARA standards.',
     link: '/services/security',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop'
+    image: '/guard1.jpeg'
   },
   {
     icon: Sparkles,
     title: 'Facility Management',
     desc: 'Corporate housekeeping and deep cleaning operations.',
     link: '/services/facility',
-    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop'
+    image: '/cleaning.jpg'
   },
   {
     icon: Building2,

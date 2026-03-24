@@ -6,16 +6,16 @@ import { X, ZoomIn } from 'lucide-react';
 
 const galleryItems = [
   // Security Category
-  { id: 1, category: 'security', url: 'https://images.unsplash.com/photo-1541888079440-ad818fb52086?q=80&w=2070&auto=format&fit=crop', title: 'Armed Division' },
-  { id: 2, category: 'security', url: 'https://images.unsplash.com/photo-1530983821616-24eeb6d2eb10?q=80&w=2070&auto=format&fit=crop', title: 'Central Command Center' },
-  { id: 3, category: 'security', url: 'https://images.unsplash.com/photo-1520694478166-daaaaaec95b4?q=80&w=2070&auto=format&fit=crop', title: 'Route Escort Team' },
-  { id: 4, category: 'security', url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop', title: 'Corporate Security' },
-  { id: 5, category: 'security', url: 'https://images.unsplash.com/photo-1563207153-f4728f321d23?q=80&w=2070&auto=format&fit=crop', title: 'Access Checkpoints' },
-  { id: 6, category: 'security', url: 'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?q=80&w=2070&auto=format&fit=crop', title: 'Event Protection' },
+  { id: 1, category: 'security', url: '/guard1.jpeg', title: 'Armed Division' },
+  { id: 2, category: 'security', url: '/guard2.avif', title: 'Central Command Center' },
+  { id: 3, category: 'security', url: '/guard3.jpeg', title: 'Route Escort Team' },
+  { id: 4, category: 'security', url: '/guard4.jpg', title: 'Corporate Security' },
+  { id: 5, category: 'security', url: '/guard5.jpg', title: 'Access Checkpoints' },
+  { id: 6, category: 'security', url: '/guard6.jpg', title: 'Event Protection' },
 
   // Facility Management Category
-  { id: 7, category: 'facility', url: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop', title: 'Corporate Housekeeping' },
-  { id: 8, category: 'facility', url: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2058&auto=format&fit=crop', title: 'Mechanized Cleaning' },
+  { id: 7, category: 'facility', url: '/cleaning.jpg', title: 'Corporate Housekeeping' },
+  { id: 8, category: 'facility', url: '/guard7.jpg', title: 'Mechanized Cleaning' },
   { id: 9, category: 'facility', url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop', title: 'Office Sanitization' },
   { id: 10, category: 'facility', url: 'https://images.unsplash.com/photo-1580227917711-2098059e6610?q=80&w=2070&auto=format&fit=crop', title: 'Industrial Scrubbing' },
   { id: 11, category: 'facility', url: 'https://images.unsplash.com/photo-1529156069898-49953eb1b5ea?q=80&w=2070&auto=format&fit=crop', title: 'Lobby Maintenance' },

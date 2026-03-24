@@ -22,7 +22,7 @@ const slides = [
   },
   {
     id: 3,
-    image: '/hero-guards.jpg',
+    image: '/guard6.jpg',
     title: 'SECURITY YOU CAN TRUST.\nPROTECTION YOU CAN SEE.',
     subtitle: 'Battle-tested guards, AI-powered surveillance, 24/7 response — across Odisha and beyond.',
     cta: 'Discover Our Security',
