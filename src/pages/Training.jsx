@@ -82,27 +82,27 @@ export default function Training() {
 
           {/* Picture Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 max-w-5xl mx-auto">
-             <div className="md:col-span-2 h-64 md:h-80 rounded-2xl overflow-hidden group relative">
-               <img src="https://images.unsplash.com/photo-1579761921200-c97de66fd2f6?q=80&w=2070&auto=format&fit=crop" alt="Physical Training" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-6">
+             <div className="md:col-span-2 h-64 md:h-80 rounded-2xl overflow-hidden group relative bg-navy-950">
+               <img src="/training/physical.jpg" alt="Physical Training" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-6 pointer-events-none">
                  <h4 className="text-white font-bebas text-2xl tracking-widest">Physical Conditioning</h4>
                </div>
              </div>
-             <div className="h-64 md:h-80 rounded-2xl overflow-hidden group relative">
-               <img src="https://images.unsplash.com/photo-1627907228175-2bfb3e6c0fba?q=80&w=2070&auto=format&fit=crop" alt="Fire Drill" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-6">
+             <div className="h-64 md:h-80 rounded-2xl overflow-hidden group relative bg-navy-950">
+               <img src="/training/fire.jpg" alt="Fire Drill" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 object-center" />
+               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-6 pointer-events-none">
                  <h4 className="text-white font-bebas text-2xl tracking-widest">Fire Handling</h4>
                </div>
              </div>
-             <div className="h-64 md:h-80 rounded-2xl overflow-hidden group relative">
-               <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2069&auto=format&fit=crop" alt="Computer Training" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-6">
+             <div className="h-64 md:h-80 rounded-2xl overflow-hidden group relative bg-navy-950">
+               <img src="/training/system.jpg" alt="Computer Training" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 object-center" />
+               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-6 pointer-events-none">
                  <h4 className="text-white font-bebas text-2xl tracking-widest">System Training</h4>
                </div>
              </div>
-             <div className="md:col-span-2 h-64 md:h-80 rounded-2xl overflow-hidden group relative">
-               <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" alt="Classroom Session" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-6">
+             <div className="md:col-span-2 h-64 md:h-80 rounded-2xl overflow-hidden group relative bg-navy-950">
+               <img src="/training/classroom.jpg" alt="Classroom Session" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-6 pointer-events-none">
                  <h4 className="text-white font-bebas text-2xl tracking-widest">Classroom Lectures</h4>
                </div>
              </div>
