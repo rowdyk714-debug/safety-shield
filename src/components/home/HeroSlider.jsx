@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const slides = [
@@ -30,8 +30,16 @@ const slides = [
   }
 ];
 
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset, velocity) => {
+  return Math.abs(offset) * velocity;
+};
+
 export default function HeroSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const nextSlide = () => setActiveIndex((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setActiveIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -41,7 +49,20 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] bg-navy-950 overflow-hidden">
+    <motion.section 
+      className="relative w-full h-screen min-h-[600px] bg-navy-950 overflow-hidden cursor-grab active:cursor-grabbing"
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.2}
+      onDragEnd={(e, { offset, velocity }) => {
+        const swipe = swipePower(offset.x, velocity.x);
+        if (swipe < -swipeConfidenceThreshold) {
+          nextSlide();
+        } else if (swipe > swipeConfidenceThreshold) {
+          prevSlide();
+        }
+      }}
+    >
       {slides.map((slide, index) => {
         const isActive = index === activeIndex;
         // Apply custom css logic for slider overlap fix
@@ -97,9 +118,24 @@ export default function HeroSlider() {
           </div>
         );
       })}
+      {/* Navigation Arrows */}
+      <button 
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-black/20 hover:bg-black/40 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-all border border-white/10 hidden md:flex"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft size={28} />
+      </button>
+      <button 
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-black/20 hover:bg-black/40 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-all border border-white/10 hidden md:flex"
+        aria-label="Next slide"
+      >
+        <ChevronRight size={28} />
+      </button>
 
       {/* Manual Controls */}
-      <div className="absolute bottom-10 left-1/2 -transform-x-1/2 flex gap-3 z-30">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30">
         {slides.map((_, i) => (
           <button
             key={i}
@@ -109,6 +145,6 @@ export default function HeroSlider() {
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
