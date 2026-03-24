@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans bg-gray-50 text-gray-900 transition-colors duration-300;
+  }
+  
+  /* Dark mode base styles */
+  .dark body {
+    @apply bg-navy-950 text-gray-50;
+  }
+  
+  h1, h2, h3, h4, .font-bebas {
+    @apply tracking-wide;
+  }
+}
+
+@layer components {
+  /* Navigation */
+  .nav-link {
+    @apply text-sm font-medium transition-colors hover:text-gold-500 relative py-2;
+  }
+  
+  /* Make active link underline */
+  .nav-link.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-gold-500 rounded-full;
+  }
+  
+  .dark .nav-link {
+    @apply text-gray-300 hover:text-gold-400;
+  }
+  
+  .dark .nav-link.active::after {
+    @apply bg-gold-400;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 font-semibold text-white bg-gold-500 rounded hover:bg-gold-600 transition-all shadow-md hover:shadow-lg active:scale-95;
+  }
+  
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 font-semibold text-gold-500 border border-gold-500 rounded hover:bg-gold-500 hover:text-white transition-all shadow-sm active:scale-95;
+  }
+  
+  /* Glassmorphism */
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .dark .glass-panel {
+    @apply bg-navy-900/80 backdrop-blur-md border border-navy-800/50 shadow-2xl;
+  }
+}
+
+/* Custom Utilities */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
