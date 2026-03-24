@@ -52,10 +52,10 @@ export default function Navbar({ toggleTheme, theme, openQuote }) {
             className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-105"
           />
           <div className="flex flex-col">
-            <span className={clsx('font-bebas text-2xl leading-none tracking-widest', isScrolled ? 'text-navy-900 dark:text-white' : 'text-white')}>
+            <span className="font-bebas text-2xl leading-none tracking-widest text-navy-900 dark:text-white transition-colors">
               SAFETY SHIELD
             </span>
-            <span className={clsx('text-[10px] uppercase font-bold tracking-widest', isScrolled ? 'text-navy-500 dark:text-gray-400' : 'text-gray-300')}>
+            <span className="text-[10px] uppercase font-bold tracking-widest text-navy-500 dark:text-gray-400 transition-colors">
               Security Services
             </span>
           </div>
@@ -73,9 +73,8 @@ export default function Navbar({ toggleTheme, theme, openQuote }) {
               >
                 <NavLink 
                   to={link.path}
-                  className={({ isActive }) => clsx('nav-link flex items-center gap-1', 
-                    isActive ? 'active' : '',
-                    !isScrolled && 'text-white hover:text-gold-400'
+                  className={({ isActive }) => clsx('nav-link flex items-center gap-1 text-navy-900 dark:text-white hover:text-gold-500 dark:hover:text-gold-400', 
+                    isActive ? 'active' : ''
                   )}
                 >
                   {link.name} <ChevronDown size={14} className={clsx("transition-transform", servicesOpen && "rotate-180")} />
@@ -112,9 +111,8 @@ export default function Navbar({ toggleTheme, theme, openQuote }) {
               <NavLink 
                 key={link.name} 
                 to={link.path}
-                className={({ isActive }) => clsx('nav-link', 
-                    isActive ? 'active' : '',
-                    !isScrolled && 'text-white hover:text-gold-400'
+                className={({ isActive }) => clsx('nav-link text-navy-900 dark:text-white hover:text-gold-500 dark:hover:text-gold-400', 
+                    isActive ? 'active' : ''
                 )}
               >
                 {link.name}
@@ -125,9 +123,7 @@ export default function Navbar({ toggleTheme, theme, openQuote }) {
 
         {/* Right Actions */}
         <div className="hidden lg:flex items-center gap-6">
-          <button onClick={toggleTheme} className={clsx("p-2 rounded-full transition-colors", 
-            isScrolled ? 'hover:bg-gray-100 dark:hover:bg-navy-800' : 'text-white hover:bg-white/10'
-          )}>
+          <button onClick={toggleTheme} className="p-2 rounded-full transition-colors text-navy-900 hover:bg-gray-100 dark:text-white dark:hover:bg-navy-800">
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
           </button>
           
@@ -138,12 +134,12 @@ export default function Navbar({ toggleTheme, theme, openQuote }) {
 
         {/* Mobile Hamburger Layout */}
         <div className="lg:hidden flex items-center gap-4 z-50">
-          <button onClick={toggleTheme} className={clsx("p-2", isScrolled || mobileMenuOpen ? 'text-gray-800 dark:text-white' : 'text-white')}>
+          <button onClick={toggleTheme} className="p-2 text-navy-900 dark:text-white">
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
           </button>
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={clsx("p-2", isScrolled || mobileMenuOpen ? 'text-gray-800 dark:text-white' : 'text-white')}
+            className="p-2 text-navy-900 dark:text-white"
           >
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

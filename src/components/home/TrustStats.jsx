@@ -38,7 +38,7 @@ export default function TrustStats() {
   ];
 
   return (
-    <section className="bg-navy-900 border-t-4 border-gold-500 relative z-20 shadow-2xl">
+    <section className="bg-white dark:bg-navy-900 border-t-4 border-gold-500 relative z-20 shadow-[0_10px_40px_rgba(0,0,0,0.08)] dark:shadow-2xl transition-colors">
       <div className="container mx-auto px-4 md:px-8 py-10 md:py-14">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-navy-800/50">
           {stats.map((stat, i) => (
@@ -54,7 +54,7 @@ export default function TrustStats() {
               <h3 className="text-4xl md:text-5xl font-bebas text-gold-500 tracking-wider mb-2">
                 <Counter end={stat.number} suffix={stat.suffix} />
               </h3>
-              <p className="text-gray-300 font-medium text-sm md:text-base uppercase tracking-widest">{stat.label}</p>
+              <p className="text-gray-600 dark:text-gray-300 font-medium text-sm md:text-base uppercase tracking-widest">{stat.label}</p>
             </motion.div>
           ))}
         </div>

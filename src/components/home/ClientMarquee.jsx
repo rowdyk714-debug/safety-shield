@@ -21,7 +21,7 @@ const marqueeItems = [...clients, ...clients];
 
 export default function ClientMarquee() {
   return (
-    <section className="py-12 bg-navy-900 border-y border-navy-800 overflow-hidden">
+    <section className="py-12 bg-white dark:bg-navy-900 border-y border-gray-200 dark:border-navy-800 overflow-hidden transition-colors">
       <div className="container mx-auto px-4 mb-8">
         <h4 className="text-center text-gold-500 font-bebas text-2xl tracking-widest">
           TRUSTED BY INDIA'S BIGGEST NAMES

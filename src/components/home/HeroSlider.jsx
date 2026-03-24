@@ -22,7 +22,7 @@ const slides = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop',
+    image: '/hero-guards.jpg',
     title: 'SECURITY YOU CAN TRUST.\nPROTECTION YOU CAN SEE.',
     subtitle: 'Battle-tested guards, AI-powered surveillance, 24/7 response — across Odisha and beyond.',
     cta: 'Discover Our Security',
@@ -55,8 +55,8 @@ export default function HeroSlider() {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-900/60 to-transparent" />
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent dark:from-navy-950/90 dark:via-navy-900/60 dark:to-transparent" />
+            <div className="absolute inset-0 bg-black/10 dark:bg-black/20" />
 
             {/* Text Content */}
             <div className="relative z-20 container mx-auto px-4 md:px-8 h-full flex items-center justify-start pt-20">
@@ -75,11 +75,11 @@ export default function HeroSlider() {
                         <span className="text-gold-400 font-bold tracking-[0.2em] text-sm uppercase">Odisha's #1 Security</span>
                       </div>
                       
-                      <h1 className="text-5xl md:text-7xl lg:text-8xl font-bebas text-white leading-[0.9] tracking-widest mb-6 whitespace-pre-line">
+                      <h1 className="text-5xl md:text-7xl lg:text-8xl font-bebas text-navy-900 dark:text-white leading-[0.9] tracking-widest mb-6 whitespace-pre-line drop-shadow-sm dark:drop-shadow-none">
                         {slide.title}
                       </h1>
                       
-                      <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-xl font-light">
+                      <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 mb-10 max-w-xl font-medium dark:font-light">
                         {slide.subtitle}
                       </p>
 

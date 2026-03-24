@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function CTABanner() {
   return (
-    <section className="relative py-24 bg-navy-950 overflow-hidden">
+    <section className="relative py-24 bg-navy-50 dark:bg-navy-950 overflow-hidden transition-colors">
       {/* Decorative hexagonal pattern background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M30 0l25.98 15v30L30 60 4.02 45V15z\' fill-opacity=\'0\' stroke=\'%23F5A623\' stroke-width=\'1\'/%3E%3C/svg%3E")' }}></div>
       
@@ -16,7 +16,7 @@ export default function CTABanner() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl lg:text-7xl font-bebas text-white tracking-widest mb-8"
+          className="text-4xl md:text-5xl lg:text-7xl font-bebas text-navy-900 dark:text-white tracking-widest mb-8"
         >
           READY TO SECURE YOUR BUSINESS?
         </motion.h2>

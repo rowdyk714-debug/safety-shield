@@ -35,7 +35,7 @@ const services = [
 
 export default function ServicesOverview() {
   return (
-    <section className="py-24 bg-navy-950 transition-colors border-t border-navy-800">
+    <section className="py-24 bg-gray-50 dark:bg-navy-950 transition-colors border-t border-gray-200 dark:border-navy-800">
       <div className="container mx-auto px-4 md:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -43,7 +43,7 @@ export default function ServicesOverview() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bebas text-white mb-6 tracking-wide"
+            className="text-4xl md:text-5xl font-bebas text-navy-900 dark:text-white mb-6 tracking-wide"
           >
             COMPREHENSIVE <span className="text-gold-500">SOLUTIONS</span>
           </motion.h2>
@@ -52,7 +52,7 @@ export default function ServicesOverview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-gray-300 leading-relaxed"
+            className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
           >
             We deploy specialized units tailored to your operational vulnerabilities. From heavily armed cash transit to immaculate hospital sanitation.
           </motion.p>
@@ -68,7 +68,7 @@ export default function ServicesOverview() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="group relative bg-navy-900 rounded-xl overflow-hidden shadow-xl hover:shadow-[0_0_40px_rgba(245,166,35,0.15)] transition-all h-[400px] flex flex-col justify-end p-6 border border-navy-800"
+                className="group relative bg-white dark:bg-navy-900 rounded-xl overflow-hidden shadow-xl hover:shadow-[0_0_40px_rgba(245,166,35,0.15)] transition-all h-[400px] flex flex-col justify-end p-6 border border-gray-200 dark:border-navy-800"
               >
                 {/* Background Image */}
                 <div 
