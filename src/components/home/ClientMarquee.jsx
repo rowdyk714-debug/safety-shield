@@ -37,9 +37,9 @@ export default function ClientMarquee() {
               className="bg-white rounded-full px-6 py-3 flex items-center justify-center min-w-[160px] h-[60px] shadow-sm shrink-0"
             >
               <img 
-                src={`https://logo.clearbit.com/${client.domain}`} 
+                src={`https://icon.horse/icon/${client.domain}`} 
                 alt={client.name} 
-                className="h-[30px] w-auto object-contain fallback-text"
+                className="max-h-[35px] max-w-[120px] object-contain"
                 onError={(e) => {
                   e.target.style.display = 'none';
                   e.target.nextSibling.style.display = 'block';
