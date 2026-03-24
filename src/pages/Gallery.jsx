@@ -5,33 +5,45 @@ import { useState } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 
 const galleryItems = [
-  // Security Category
-  { id: 1, category: 'security', url: '/guard1.jpeg', title: 'Armed Division' },
-  { id: 2, category: 'security', url: '/guard2.avif', title: 'Central Command Center' },
-  { id: 3, category: 'security', url: '/guard3.jpeg', title: 'Route Escort Team' },
-  { id: 4, category: 'security', url: '/guard4.jpg', title: 'Corporate Security' },
-  { id: 5, category: 'security', url: '/guard5.jpg', title: 'Access Checkpoints' },
-  { id: 6, category: 'security', url: '/guard6.jpg', title: 'Event Protection' },
+  // Security Category — Indian guards in uniform
+  { id: 1, category: 'security', url: '/guard1.jpeg', title: 'Guard Formation' },
+  { id: 2, category: 'security', url: '/guard2.avif', title: 'Security Parade' },
+  { id: 3, category: 'security', url: '/guard4.jpg', title: 'Corporate Security' },
+  { id: 4, category: 'security', url: '/guard5.jpg', title: 'Access Checkpoints' },
+  { id: 5, category: 'security', url: '/guard6.jpg', title: 'On Duty' },
+  { id: 6, category: 'security', url: 'https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?q=80&w=2072&auto=format&fit=crop', title: 'Guard Post' },
+  { id: 7, category: 'security', url: 'https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?q=80&w=2070&auto=format&fit=crop', title: 'ID Verification' },
+  { id: 8, category: 'security', url: 'https://images.unsplash.com/photo-1561065465-0928-01c50c5e94b7?q=80&w=2070&auto=format&fit=crop', title: 'Entrance Post' },
+  { id: 9, category: 'security', url: 'https://images.unsplash.com/photo-1571945153237-4929e783af4a?q=80&w=1887&auto=format&fit=crop', title: 'Night Patrol' },
+  { id: 10, category: 'security', url: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=2070&auto=format&fit=crop', title: 'CCTV Monitoring' },
+  { id: 11, category: 'security', url: 'https://images.unsplash.com/photo-1564419320461-6870880221ad?q=80&w=2068&auto=format&fit=crop', title: 'Armed Division' },
 
-  // Facility Management Category
-  { id: 7, category: 'facility', url: '/cleaning.jpg', title: 'Corporate Housekeeping' },
-  { id: 8, category: 'facility', url: '/guard7.jpg', title: 'Mechanized Cleaning' },
-  { id: 9, category: 'facility', url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop', title: 'Office Sanitization' },
-  { id: 10, category: 'facility', url: 'https://images.unsplash.com/photo-1580227917711-2098059e6610?q=80&w=2070&auto=format&fit=crop', title: 'Industrial Scrubbing' },
-  { id: 11, category: 'facility', url: 'https://images.unsplash.com/photo-1529156069898-49953eb1b5ea?q=80&w=2070&auto=format&fit=crop', title: 'Lobby Maintenance' },
+  // Facility Management — Cleaning staff in action
+  { id: 12, category: 'facility', url: '/cleaning.jpg', title: 'Corporate Housekeeping' },
+  { id: 13, category: 'facility', url: '/guard7.jpg', title: 'Mechanized Cleaning' },
+  { id: 14, category: 'facility', url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop', title: 'Office Sanitization' },
+  { id: 15, category: 'facility', url: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop', title: 'Floor Mopping' },
+  { id: 16, category: 'facility', url: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop', title: 'Industrial Scrubbing' },
+  { id: 17, category: 'facility', url: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=2070&auto=format&fit=crop', title: 'Lobby Maintenance' },
+  { id: 18, category: 'facility', url: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=2070&auto=format&fit=crop', title: 'Surface Wiping' },
+  { id: 19, category: 'facility', url: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=2069&auto=format&fit=crop', title: 'Deep Cleaning' },
 
   // Manpower / Managers Category
-  { id: 12, category: 'manpower', url: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop', title: 'IT & Support Staff' },
-  { id: 13, category: 'manpower', url: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop', title: 'Project Managers' },
-  { id: 14, category: 'manpower', url: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2070&auto=format&fit=crop', title: 'HR & Administration' },
-  { id: 15, category: 'manpower', url: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2070&auto=format&fit=crop', title: 'Corporate Teams' },
-  { id: 16, category: 'manpower', url: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop', title: 'Factory Operations' },
-  { id: 17, category: 'manpower', url: 'https://images.unsplash.com/photo-1556761175-5973e23ee7d4?q=80&w=1974&auto=format&fit=crop', title: 'Site Supervisors' },
+  { id: 20, category: 'manpower', url: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop', title: 'IT & Support Staff' },
+  { id: 21, category: 'manpower', url: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop', title: 'Project Managers' },
+  { id: 22, category: 'manpower', url: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2070&auto=format&fit=crop', title: 'HR & Administration' },
+  { id: 23, category: 'manpower', url: 'https://images.unsplash.com/photo-1556761175-5973e23ee7d4?q=80&w=1974&auto=format&fit=crop', title: 'Site Supervisors' },
+  { id: 24, category: 'manpower', url: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop', title: 'Factory Operations' },
 
   // Training Category
-  { id: 18, category: 'training', url: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop', title: 'Academy Lectures' },
-  { id: 19, category: 'training', url: 'https://images.unsplash.com/photo-1627907228175-2bfb3e6c0fba?q=80&w=2070&auto=format&fit=crop', title: 'Fire Safety Drill' },
-  { id: 20, category: 'training', url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop', title: 'Induction Program' },
+  { id: 25, category: 'training', url: '/training/classroom.jpg', title: 'Academy Lectures' },
+  { id: 26, category: 'training', url: '/training/fire.jpg', title: 'Fire Safety Drill' },
+  { id: 27, category: 'training', url: '/training/physical.jpg', title: 'Physical Conditioning' },
+  { id: 28, category: 'training', url: '/training/system.jpg', title: 'System Training' },
+  { id: 29, category: 'training', url: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop', title: 'Parade Formation' },
+  { id: 30, category: 'training', url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop', title: 'Induction Program' },
+  { id: 31, category: 'training', url: 'https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?q=80&w=2072&auto=format&fit=crop', title: 'Combat Drills' },
+  { id: 32, category: 'training', url: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2069&auto=format&fit=crop', title: 'Fitness Training' },
 ];
 
 export default function Gallery() {
