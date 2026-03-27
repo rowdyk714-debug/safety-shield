@@ -11,7 +11,7 @@ const galleryItems = [
   { id: 4, category: 'security', url: '/guard4.jpg',           title: 'Corporate Security' },
   { id: 5, category: 'security', url: '/guard5.jpg',           title: 'Access Checkpoint' },
   { id: 6, category: 'security', url: '/guard7.jpg',           title: 'Deployed Unit' },
-  { id: 7, category: 'security', url: '/gate-guard.png',         title: 'Gate Duty' },
+  { id: 7, category: 'security', url: '/gate-guard.jpg',        title: 'Gate Duty' },
   { id: 8, category: 'facility', url: '/cleaning.jpg',         title: 'Corporate Housekeeping' },
   { id: 9, category: 'manpower', url: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop', title: 'Project Managers' },
   { id: 10, category: 'training', url: '/training/classroom.jpg', title: 'Academy Lectures' },
