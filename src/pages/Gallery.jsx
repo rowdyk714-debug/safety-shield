@@ -5,47 +5,16 @@ import { useState } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 
 const galleryItems = [
-  // ── Security Category ──────────────────────────────────────────
-  // Local images from user's own uploads
-  { id: 1,  category: 'security', url: '/guard1.jpeg',  title: 'Guard Formation' },
-  { id: 2,  category: 'security', url: '/guard2.avif',  title: 'Security Parade' },
-  { id: 3,  category: 'security', url: '/guard4.jpg',   title: 'Corporate Security' },
-  { id: 4,  category: 'security', url: '/guard5.jpg',   title: 'Access Checkpoints' },
-  { id: 5,  category: 'security', url: '/guard6.jpg',   title: 'On Duty' },
-  // Unsplash — security guard / surveillance / duty images
-  { id: 6,  category: 'security', url: 'https://images.unsplash.com/photo-1602568275563-44088028573e?q=80&w=2070&auto=format&fit=crop', title: 'Gate Duty' },
-  { id: 7,  category: 'security', url: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=2069&auto=format&fit=crop', title: 'ID Card Check' },
-  { id: 8,  category: 'security', url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop', title: 'Shift Commander' },
-  { id: 9,  category: 'security', url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop', title: 'Guard Briefing' },
-  { id: 10, category: 'security', url: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop', title: 'Team Muster' },
-
-  // ── Facility Management ────────────────────────────────────────
-  // Local images from user's own uploads
-  { id: 11, category: 'facility', url: '/cleaning.jpg', title: 'Corporate Housekeeping' },
-  { id: 12, category: 'facility', url: '/guard7.jpg',   title: 'Mechanized Cleaning' },
-  // Unsplash — professional cleaning staff with equipment
-  { id: 13, category: 'facility', url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop', title: 'Office Sanitization' },
-  { id: 14, category: 'facility', url: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop', title: 'Floor Mopping' },
-  { id: 15, category: 'facility', url: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop', title: 'Industrial Scrubbing' },
-  { id: 16, category: 'facility', url: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=2070&auto=format&fit=crop', title: 'Lobby Maintenance' },
-  { id: 17, category: 'facility', url: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=2069&auto=format&fit=crop', title: 'Deep Cleaning' },
-
-  // ── Manpower / Management ──────────────────────────────────────
-  { id: 18, category: 'manpower', url: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop', title: 'Project Managers' },
-  { id: 19, category: 'manpower', url: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2070&auto=format&fit=crop', title: 'HR & Administration' },
-  { id: 20, category: 'manpower', url: 'https://images.unsplash.com/photo-1556761175-5973e23ee7d4?q=80&w=1974&auto=format&fit=crop', title: 'Site Supervisors' },
-  { id: 21, category: 'manpower', url: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop', title: 'Factory Operations' },
-
-  // ── Training Category ──────────────────────────────────────────
-  // User's own uploaded training photos
-  { id: 22, category: 'training', url: '/training/classroom.jpg', title: 'Academy Lectures' },
-  { id: 23, category: 'training', url: '/training/fire.jpg',      title: 'Fire Safety Drill' },
-  { id: 24, category: 'training', url: '/training/physical.jpg',  title: 'Physical Conditioning' },
-  { id: 25, category: 'training', url: '/training/system.jpg',    title: 'System Training' },
-  // Unsplash — security/police training drills
-  { id: 26, category: 'training', url: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop', title: 'Parade Formation' },
-  { id: 27, category: 'training', url: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=2070&auto=format&fit=crop', title: 'Drill Exercises' },
-  { id: 28, category: 'training', url: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2080&auto=format&fit=crop', title: 'Combat Readiness' },
+  { id: 1, category: 'security', url: '/guard1.jpeg',          title: 'Guard Formation' },
+  { id: 2, category: 'security', url: '/guard6.jpg',           title: 'On Duty' },
+  { id: 3, category: 'security', url: '/guard2.avif',          title: 'Security Parade' },
+  { id: 4, category: 'security', url: '/guard4.jpg',           title: 'Corporate Security' },
+  { id: 5, category: 'security', url: '/guard5.jpg',           title: 'Access Checkpoint' },
+  { id: 6, category: 'security', url: '/guard7.jpg',           title: 'Deployed Unit' },
+  { id: 7, category: 'security', url: '/gate-guard.png',         title: 'Gate Duty' },
+  { id: 8, category: 'facility', url: '/cleaning.jpg',         title: 'Corporate Housekeeping' },
+  { id: 9, category: 'manpower', url: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop', title: 'Project Managers' },
+  { id: 10, category: 'training', url: '/training/classroom.jpg', title: 'Academy Lectures' },
 ];
 
 export default function Gallery() {
